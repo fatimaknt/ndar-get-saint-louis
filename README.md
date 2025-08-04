@@ -1,46 +1,133 @@
-# Getting Started with Create React App
+# Ndar Gët - Les yeux de Saint-Louis
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Une plateforme web moderne pour découvrir Saint-Louis du Sénégal sous un autre angle.
 
-## Available Scripts
+## 🎯 Mission
 
-In the project directory, you can run:
+Ndar Gët centralise tous les événements, expériences, hébergements, covoiturage et immobilier à Saint-Louis pour offrir une expérience complète aux habitants, touristes et organisateurs d'événements.
 
-### `npm start`
+## ✨ Fonctionnalités
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Événements** : Découvrez les meilleurs événements culturels, musicaux, gastronomiques et sportifs
+- **Expériences** : Vivez des expériences authentiques avec les habitants locaux
+- **Hébergements** : Trouvez votre logement idéal (hôtels, maisons d'hôtes, appartements, villas)
+- **Covoiturage** : Partagez vos trajets et économisez sur vos déplacements
+- **Immobilier** : Trouvez votre bien immobilier à Saint-Louis
+- **Design Responsive** : Interface optimisée pour mobile, tablette et desktop
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🎨 Palette de Couleurs
 
-### `npm test`
+- **Bleu Primaire** : #0366a6 (Bleu profond du fleuve Sénégal)
+- **Orange Primaire** : #f2a108 (Couleur vibrante et chaleureuse)
+- **Blanc Secondaire** : #ffffff
+- **Brun Secondaire** : #bf7534
+- **Brun Foncé** : #732d0e
+- **Noir** : #020203
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Technologies Utilisées
 
-### `npm run build`
+- **Frontend** : React.js avec TypeScript
+- **Styling** : Tailwind CSS
+- **Animations** : Framer Motion
+- **Icons** : Heroicons
+- **Routing** : React Router DOM
+- **Responsive Design** : Mobile-first approach
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Installation et Lancement
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Cloner le projet**
+   ```bash
+   git clone [url-du-repo]
+   cd ndar-get
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Installer les dépendances**
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+3. **Lancer l'application en mode développement**
+   ```bash
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+4. **Ouvrir dans le navigateur**
+   ```
+   http://localhost:3000
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📱 Pages Disponibles
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- **Accueil** (`/`) : Page principale avec présentation et services
+- **Événements** (`/evenements`) : Catalogue d'événements avec filtres
+- **Expériences** (`/experiences`) : Expériences locales authentiques
+- **Hébergements** (`/hebergements`) : Logements disponibles
+- **Covoiturage** (`/covoiturage`) : Trajets partagés
+- **Immobilier** (`/immobilier`) : Biens immobiliers
+- **À propos** (`/a-propos`) : Histoire et équipe
+- **Contact** (`/contact`) : Formulaire de contact
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 🎯 Fonctionnalités Techniques
 
-## Learn More
+- **Navigation Responsive** : Menu hamburger sur mobile
+- **Animations Fluides** : Transitions et animations avec Framer Motion
+- **Recherche et Filtres** : Fonctionnalités de recherche par catégorie
+- **Design System** : Composants réutilisables et cohérents
+- **Accessibilité** : Respect des standards d'accessibilité web
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📁 Structure du Projet
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+src/
+├── components/          # Composants réutilisables
+│   ├── Navbar.tsx      # Navigation principale
+│   └── Footer.tsx      # Pied de page
+├── pages/              # Pages de l'application
+│   ├── Home.tsx        # Page d'accueil
+│   ├── Events.tsx      # Page événements
+│   ├── Experiences.tsx # Page expériences
+│   ├── Accommodations.tsx # Page hébergements
+│   ├── Carpooling.tsx  # Page covoiturage
+│   ├── RealEstate.tsx  # Page immobilier
+│   ├── About.tsx       # Page à propos
+│   └── Contact.tsx     # Page contact
+├── assets/             # Ressources statiques
+├── App.tsx             # Composant principal
+└── index.css           # Styles globaux
+```
+
+## 🎨 Composants Personnalisés
+
+- **Logo Ndar Gët** : Logo animé avec les couleurs de la marque
+- **Cartes de Services** : Design moderne pour présenter les services
+- **Boutons** : Système de boutons cohérent (primaire, secondaire, outline)
+- **Formulaires** : Design uniforme pour tous les formulaires
+- **Grilles Responsives** : Adaptation automatique selon la taille d'écran
+
+## 🌟 Points Forts
+
+- **Design Moderne** : Interface élégante et professionnelle
+- **Performance** : Optimisé pour des temps de chargement rapides
+- **UX Intuitive** : Navigation claire et expérience utilisateur fluide
+- **Responsive** : Parfaitement adapté à tous les appareils
+- **Accessible** : Respect des standards d'accessibilité
+
+## 📞 Contact
+
+- **Email** : contact@ndarget.com
+- **Téléphone** : +221 XX XXX XX XX
+- **Adresse** : Saint-Louis, Sénégal
+
+## 🚀 Déploiement
+
+Pour déployer l'application en production :
+
+```bash
+npm run build
+```
+
+Les fichiers de production seront générés dans le dossier `build/`.
+
+---
+
+**Ndar Gët** - Découvrez Saint-Louis sous un autre angle ! 👁️✨
