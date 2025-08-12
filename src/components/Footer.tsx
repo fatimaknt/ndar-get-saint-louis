@@ -122,9 +122,22 @@ const Footer: React.FC = () => {
 
                 <div className="mt-12 pt-8 border-t border-gray-700">
                     <div className="flex flex-col md:flex-row justify-between items-center">
-                        <p className="text-gray-400 text-sm">
-                            © {currentYear} Ndar Gët. Tous droits réservés.
-                        </p>
+                        <div className="text-center md:text-left">
+                            <p className="text-gray-400 text-sm">
+                                © {currentYear} Ndar Gët. Tous droits réservés.
+                            </p>
+                            <p className="text-gray-500 text-xs mt-1">
+                                Développé par{' '}
+                                <a
+                                    href="https://www.tiktok.com/@coding_fatimah"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-primary-orange hover:text-orange-400 transition-colors duration-200"
+                                >
+                                    Fatimah Kanoute
+                                </a>
+                            </p>
+                        </div>
                         <div className="flex space-x-6 mt-4 md:mt-0">
                             <a
                                 href="https://www.facebook.com/share/15kBgiePB7/?mibextid=wwXIfr"
