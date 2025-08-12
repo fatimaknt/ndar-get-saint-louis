@@ -148,8 +148,8 @@ const Experiences: React.FC = () => {
                                     key={category.id}
                                     onClick={() => setSelectedCategory(category.id)}
                                     className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${selectedCategory === category.id
-                                            ? 'bg-primary-orange text-white'
-                                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                                        ? 'bg-primary-orange text-white'
+                                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                                         }`}
                                 >
                                     {category.name} ({category.count})
@@ -190,10 +190,10 @@ const Experiences: React.FC = () => {
                                     />
                                     <div className="absolute top-4 left-4">
                                         <span className={`px-3 py-1 rounded-full text-xs font-medium text-white ${experience.category === 'cultural' ? 'bg-blue-500' :
-                                                experience.category === 'culinary' ? 'bg-orange-500' :
-                                                    experience.category === 'nature' ? 'bg-green-500' :
-                                                        experience.category === 'adventure' ? 'bg-purple-500' :
-                                                            'bg-gray-500'
+                                            experience.category === 'culinary' ? 'bg-orange-500' :
+                                                experience.category === 'nature' ? 'bg-green-500' :
+                                                    experience.category === 'adventure' ? 'bg-purple-500' :
+                                                        'bg-gray-500'
                                             }`}>
                                             {categories.find(c => c.id === experience.category)?.name}
                                         </span>
@@ -231,7 +231,14 @@ const Experiences: React.FC = () => {
                                         <span className="text-lg font-bold text-primary-orange">
                                             {experience.price}
                                         </span>
-                                        <button className="btn-primary text-sm">
+                                        <button
+                                            className="btn-primary text-sm"
+                                            onClick={() => {
+                                                const message = `Bonjour ! Je souhaite réserver l'expérience "${experience.title}" pour ${experience.participants} personne(s).`;
+                                                const whatsappUrl = `https://wa.me/221771795103?text=${encodeURIComponent(message)}`;
+                                                window.open(whatsappUrl, '_blank');
+                                            }}
+                                        >
                                             Réserver
                                         </button>
                                     </div>

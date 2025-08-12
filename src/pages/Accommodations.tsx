@@ -248,7 +248,14 @@ const Accommodations: React.FC = () => {
                     <span className="text-lg font-bold text-primary-orange">
                       {accommodation.price}
                     </span>
-                    <button className="btn-primary text-sm">
+                    <button
+                      className="btn-primary text-sm"
+                      onClick={() => {
+                        const message = `Bonjour ! Je souhaite réserver l'hébergement "${accommodation.title}" pour ${accommodation.guests}.`;
+                        const whatsappUrl = `https://wa.me/221771795103?text=${encodeURIComponent(message)}`;
+                        window.open(whatsappUrl, '_blank');
+                      }}
+                    >
                       Réserver
                     </button>
                   </div>

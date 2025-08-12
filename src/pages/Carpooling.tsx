@@ -163,7 +163,14 @@ const Carpooling: React.FC = () => {
                   <span className="text-lg font-bold text-primary-orange">
                     {ride.price}
                   </span>
-                  <button className="btn-primary text-sm">
+                  <button
+                    className="btn-primary text-sm"
+                    onClick={() => {
+                      const message = `Bonjour ! Je souhaite réserver ${ride.seats} place(s) pour le trajet de ${ride.from} vers ${ride.to} le ${ride.date} à ${ride.time}.`;
+                      const whatsappUrl = `https://wa.me/221771795103?text=${encodeURIComponent(message)}`;
+                      window.open(whatsappUrl, '_blank');
+                    }}
+                  >
                     Réserver
                   </button>
                 </div>

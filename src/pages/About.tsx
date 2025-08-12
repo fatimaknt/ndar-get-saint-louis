@@ -236,7 +236,7 @@ const About: React.FC = () => {
                                     Téléphone
                                 </h3>
                                 <p className="text-gray-600">
-                                    +221 XX XXX XX XX
+                                    +221 77 179 51 03
                                 </p>
                             </motion.div>
 
@@ -254,7 +254,7 @@ const About: React.FC = () => {
                                     Email
                                 </h3>
                                 <p className="text-gray-600">
-                                    contact@ndarget.com
+                                    contact@saintlouisdusenegal.net
                                 </p>
                             </motion.div>
                         </div>

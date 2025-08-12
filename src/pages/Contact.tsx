@@ -15,9 +15,39 @@ const Contact: React.FC = () => {
         message: ''
     });
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
+        setIsSubmitting(true);
+        setSubmitStatus('idle');
+
+        try {
+            const response = await fetch('https://formspree.io/f/xldlzpaj', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    subject: formData.subject,
+                    message: formData.message,
+                }),
+            });
+
+            if (response.ok) {
+                setSubmitStatus('success');
+                setFormData({ name: '', email: '', subject: '', message: '' });
+            } else {
+                setSubmitStatus('error');
+            }
+        } catch (error) {
+            setSubmitStatus('error');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -206,10 +236,26 @@ const Contact: React.FC = () => {
 
                                     <button
                                         type="submit"
-                                        className="w-full btn-primary text-lg py-4"
+                                        disabled={isSubmitting}
+                                        className={`w-full text-lg py-4 transition-all duration-200 ${isSubmitting
+                                            ? 'bg-gray-400 cursor-not-allowed'
+                                            : 'btn-primary hover:bg-orange-600'
+                                            }`}
                                     >
-                                        Envoyer le message
+                                        {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
                                     </button>
+
+                                    {submitStatus === 'success' && (
+                                        <div className="mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+                                            ✅ Message envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.
+                                        </div>
+                                    )}
+
+                                    {submitStatus === 'error' && (
+                                        <div className="mt-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+                                            ❌ Erreur lors de l'envoi. Veuillez réessayer ou nous contacter directement.
+                                        </div>
+                                    )}
                                 </form>
                             </motion.div>
 
