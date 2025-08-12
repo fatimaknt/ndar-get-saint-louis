@@ -37,13 +37,13 @@ const Contact: React.FC = () => {
         {
             icon: PhoneIcon,
             title: 'Téléphone',
-            content: '+221 XX XXX XX XX',
+            content: '+221 77 179 51 03',
             description: 'Lun-Ven, 9h-18h'
         },
         {
             icon: EnvelopeIcon,
             title: 'Email',
-            content: 'contact@ndarget.com',
+            content: 'contact@saintlouisdusenegal.net',
             description: 'Réponse sous 24h'
         },
         {
