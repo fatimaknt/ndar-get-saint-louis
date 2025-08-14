@@ -95,21 +95,21 @@ const Home: React.FC = () => {
                             transition={{ duration: 0.8 }}
                             className="max-w-4xl space-y-7 text-center"
                         >
-                            <div className="space-y-6">
-                                <h1 className="text-5xl md:text-7xl font-black leading-tight">
+                            <div className="space-y-4 md:space-y-6">
+                                <h1 className="text-3xl md:text-5xl lg:text-7xl font-black leading-tight">
                                     Bienvenue à{' '}
                                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-orange to-orange-400">
                                         Saint-Louis
                                     </span>
                                     <br />
-                                    <span className="text-4xl md:text-6xl font-bold text-blue-100">
+                                    <span className="text-2xl md:text-4xl lg:text-6xl font-bold text-blue-100">
                                         du Sénégal !
                                     </span>
                                 </h1>
-                                <p className="text-xl md:text-2xl text-blue-100 leading-relaxed font-light">
+                                <p className="text-lg md:text-xl lg:text-2xl text-blue-100 leading-relaxed font-light">
                                     Ville de la Teranga !
                                 </p>
-                                <div className="space-y-4 text-lg text-blue-100 leading-relaxed">
+                                <div className="space-y-3 md:space-y-4 text-sm md:text-lg text-blue-100 leading-relaxed">
                                     <p>
                                         Située au bord de l'Océan Atlantique et à la jonction du désert du Sahara avec la brousse subsaharienne, Saint-Louis du Sénégal est certainement la meilleure introduction à la découverte de l'Afrique de l'Ouest francophone.
                                     </p>
@@ -125,48 +125,48 @@ const Home: React.FC = () => {
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.3 }}
-                        className="absolute bottom-20 left-1/4 transform -translate-x-1/2 w-full max-w-2xl"
+                        className="absolute bottom-8 md:bottom-20 left-1/2 transform -translate-x-1/2 w-full max-w-sm md:max-w-2xl px-4 md:px-0"
                     >
-                        <div className="bg-white rounded-3xl p-4 shadow-2xl">
-                            <div className="text-center mb-3">
-                                <h2 className="text-2xl font-black text-gray-900 text-left">
+                        <div className="bg-white rounded-3xl p-4 md:p-6 shadow-2xl">
+                            <div className="text-center mb-4 md:mb-3">
+                                <h2 className="text-xl md:text-2xl font-black text-gray-900">
                                     Trouvez votre{' '}
                                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-orange to-orange-500">
                                         expérience
                                     </span>
                                 </h2>
                             </div>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
 
-                                <div className="space-y-2">
-                                    <label className="block text-gray-900 font-semibold text-sm mb-1">
+                                <div className="space-y-1 md:space-y-2">
+                                    <label className="block text-gray-900 font-semibold text-xs md:text-sm mb-1">
                                         Activité
                                     </label>
                                     <div className="relative">
-                                        <MapPinIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                                        <MapPinIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-3 h-3 md:w-4 md:h-4 text-gray-400" />
                                         <input
                                             type="text"
                                             placeholder="Visite Guidée de la région"
-                                            className="w-full pl-10 pr-3 py-3 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent text-sm"
+                                            className="w-full pl-8 md:pl-10 pr-3 py-2 md:py-3 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent text-xs md:text-sm"
                                         />
                                     </div>
                                 </div>
-                                <div className="space-y-2">
-                                    <label className="block text-gray-900 font-semibold text-sm mb-1">
+                                <div className="space-y-1 md:space-y-2">
+                                    <label className="block text-gray-900 font-semibold text-xs md:text-sm mb-1">
                                         Zone d'excursion
                                     </label>
                                     <div className="relative">
-                                        <CalendarIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                                        <CalendarIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-3 h-3 md:w-4 md:h-4 text-gray-400" />
                                         <input
                                             type="text"
                                             placeholder="Entrez une zone"
-                                            className="w-full pl-10 pr-3 py-3 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent text-sm"
+                                            className="w-full pl-8 md:pl-10 pr-3 py-2 md:py-3 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent text-xs md:text-sm"
                                         />
                                     </div>
                                 </div>
                                 <div className="flex items-end">
-                                    <button className="w-full px-6 py-3 bg-primary-orange text-white font-semibold text-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
-                                        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <button className="w-full px-4 md:px-6 py-2 md:py-3 bg-primary-orange text-white font-semibold text-xs md:text-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                                        <svg className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                         </svg>
                                         Voir
@@ -279,6 +279,76 @@ const Home: React.FC = () => {
                                 </Link>
                             </div>
                         </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Lieux Populaires Section */}
+            <section className="section-padding bg-white">
+                <div className="container-custom">
+                    <div className="text-center mb-12">
+                        <h2 className="text-4xl md:text-5xl font-black text-gray-900">
+                            Lieux <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-orange to-orange-500">Populaires</span>
+                        </h2>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {/* Carte 1 */}
+                        <div className="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col">
+                            <div className="relative">
+                                <img src={require('../assets/images/WhatsApp Image 2025-08-14 at 20.05.37.jpeg')} alt="Pont de Faidherbe" className="w-full h-56 object-cover" />
+                                <div className="absolute top-4 left-4 bg-white rounded-full p-2 shadow">
+                                    <svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" /><path d="M8 6h8M8 10h8M8 14h8M8 18h8" /></svg>
+                                </div>
+                            </div>
+                            <div className="p-6 flex-1 flex flex-col">
+                                <div className="flex items-center mb-3">
+                                    <h3 className="font-bold text-xl text-gray-900 mr-3">Pont de Faidherbe</h3>
+                                    <span className="bg-orange-50 text-primary-orange font-semibold text-xs px-3 py-1 rounded-xl">Monument historique emblématique</span>
+                                </div>
+                                <p className="text-gray-600 mb-6 flex-1">Magnifique pont métallique construit par Gustave Eiffel, symbole architectural de Saint-Louis reliant l'île à la terre ferme.</p>
+                                <div>
+                                    <a href="/lieu/1" className="text-primary-orange font-bold flex items-center hover:underline">Lire Plus <span className="ml-1">→</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        {/* Carte 2 */}
+                        <div className="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col">
+                            <div className="relative">
+                                <img src={require('../assets/images/WhatsApp Image 2025-08-14 at 20.05.36.jpeg')} alt="Parc du Djoudj" className="w-full h-56 object-cover" />
+                                <div className="absolute top-4 left-4 bg-white rounded-full p-2 shadow">
+                                    <svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 0v10l6 3" /></svg>
+                                </div>
+                            </div>
+                            <div className="p-6 flex-1 flex flex-col">
+                                <div className="flex items-center mb-3">
+                                    <h3 className="font-bold text-xl text-gray-900 mr-3">Parc du Djoudj</h3>
+                                    <span className="bg-orange-50 text-primary-orange font-semibold text-xs px-3 py-1 rounded-xl">Patrimoine mondial UNESCO</span>
+                                </div>
+                                <p className="text-gray-600 mb-6 flex-1">Sanctuaire ornithologique exceptionnel, refuge de millions d'oiseaux migrateurs venus d'Europe et patrimoine mondial UNESCO.</p>
+                                <div>
+                                    <a href="/lieu/2" className="text-primary-orange font-bold flex items-center hover:underline">Lire Plus <span className="ml-1">→</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        {/* Carte 3 */}
+                        <div className="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col">
+                            <div className="relative">
+                                <img src={require('../assets/images/WhatsApp Image 2025-08-14 at 20.05.35.jpeg')} alt="Bou El Mogdad" className="w-full h-56 object-cover" />
+                                <div className="absolute top-4 left-4 bg-white rounded-full p-2 shadow">
+                                    <svg className="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M4 17v-5a2 2 0 012-2h12a2 2 0 012 2v5M16 3v4M8 3v4M4 21h16" /></svg>
+                                </div>
+                            </div>
+                            <div className="p-6 flex-1 flex flex-col">
+                                <div className="flex items-center mb-3">
+                                    <h3 className="font-bold text-xl text-gray-900 mr-3">Bou El Mogdad</h3>
+                                    <span className="bg-orange-50 text-primary-orange font-semibold text-xs px-3 py-1 rounded-xl">Croisière historique authentique</span>
+                                </div>
+                                <p className="text-gray-600 mb-6 flex-1">Croisière authentique sur le fleuve à bord d'un bateau historique, découverte des villages traditionnels riversides.</p>
+                                <div>
+                                    <a href="/lieu/3" className="text-primary-orange font-bold flex items-center hover:underline">Lire Plus <span className="ml-1">→</span></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
