@@ -68,20 +68,20 @@ const About: React.FC = () => {
                             viewport={{ once: true }}
                         >
                             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                                Notre Mission
+                                Notre Histoire
                             </h2>
                             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                                Ndar Gët est né d'une passion pour Saint-Louis et d'un désir de partager
-                                la richesse culturelle, historique et humaine de cette ville unique.
+                                Le nom de notre projet n'est pas un hasard. En wolof, "bët" signifie œil, et son pluriel est "gët".
+                                "Ndar Gët", c'est donc "Les yeux de Saint-Louis" : un regard attentif et engagé porté sur une ville aussi riche qu'inspirante.
                             </p>
                             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                                Notre mission est de centraliser et de promouvoir tous les événements,
-                                expériences et services qui font de Saint-Louis une destination
-                                incontournable du Sénégal.
+                                Nichée entre fleuve et océan, Saint-Louis du Sénégal est bien plus qu'une simple ville : c'est une mémoire vivante. Ancienne capitale de l'Afrique occidentale française, elle a vu passer navigateurs, commerçants, poètes et intellectuels. Carrefour entre l'Afrique noire, l'Europe et le monde arabe, elle incarne une rencontre rare entre les civilisations. Ses façades coloniales aux teintes ocre, ses balcons en fer forgé, ses ruelles pavées et ses ponts emblématiques racontent une histoire plurielle, faite d'échanges, de luttes et de renaissances.
+                            </p>
+                            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                                Ici, la culture ne se contemple pas : elle se vit, se ressent, se célèbre. Du mbalax aux notes profondes de la kora, des recettes locales aux influences mauresques aux rituels confrériques, chaque instant reflète l'âme singulière de Saint-Louis : fière de son passé, ouverte sur l'avenir.
                             </p>
                             <p className="text-lg text-gray-600 leading-relaxed">
-                                Nous croyons que chaque visiteur mérite de découvrir Saint-Louis
-                                "sous un autre angle", comme un véritable habitant.
+                                C'est dans cet esprit que Ndar Gët est né : un projet digital et culturel qui observe, capture et partage la beauté, l'histoire et la vie de Saint-Louis sous toutes ses facettes. Grâce aux outils numériques et aux réseaux sociaux, nous œuvrons pour redonner à cette ville la visibilité qu'elle mérite. Avec plus de 2 millions de vues par mois sur Facebook, nous avons la preuve qu'un véritable intérêt existe pour Saint-Louis ; il ne manque qu'un écosystème de valorisation et de narration pour en révéler toute la splendeur.
                             </p>
                         </motion.div>
 

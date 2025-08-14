@@ -11,7 +11,7 @@ import {
     ArrowRightIcon,
     PlayIcon
 } from '@heroicons/react/24/outline';
-import saintlouis from '../assets/images/saintlouis.jpg';
+import saintlouis from '../assets/images/image2.jpeg';
 
 const Home: React.FC = () => {
     const services = [
@@ -88,79 +88,195 @@ const Home: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-blue/80 via-blue-700/70 to-blue-900/90"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div>
                 <div className="relative container-custom section-padding">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[90vh]">
+                    <div className="flex flex-col justify-center items-center min-h-[90vh]">
                         <motion.div
-                            initial={{ opacity: 0, x: -50 }}
-                            animate={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
-                            className="space-y-8"
+                            className="max-w-4l space-y-7 text-center"
                         >
                             <div className="space-y-6">
                                 <h1 className="text-5xl md:text-7xl font-black leading-tight">
-                                    Découvrez{' '}
+                                    Bienvenue à{' '}
                                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-orange to-orange-400">
                                         Saint-Louis
                                     </span>
                                     <br />
                                     <span className="text-4xl md:text-6xl font-bold text-blue-100">
-                                        sous un autre angle
+                                        du Sénégal !
                                     </span>
                                 </h1>
                                 <p className="text-xl md:text-2xl text-blue-100 leading-relaxed font-light">
-                                    La plateforme qui centralise tous les événements, expériences et services
-                                    pour vous faire vivre la vraie essence de cette ville historique.
+                                    Ville de la Teranga !
                                 </p>
+                                <div className="space-y-4 text-lg text-blue-100 leading-relaxed">
+                                    <p>
+                                        Située au bord de l'Océan Atlantique et à la jonction du désert du Sahara avec la brousse subsaharienne, Saint-Louis du Sénégal est certainement la meilleure introduction à la découverte de l'Afrique de l'Ouest francophone.
+                                    </p>
+                                    <p>
+                                        Plus ancienne ville édifiée par les français en Afrique de l'Ouest (1659), symbole de l'élégance et du raffinement, Saint-Louis fut la capitale du Sénégal et de l'Afrique Occidentale Française au début du XXième siècle.
+                                    </p>
+                                </div>
                             </div>
+                        </motion.div>
+                    </div>
 
-                            <div className="flex flex-col sm:flex-row gap-6">
-                                <Link
-                                    to="/evenements"
-                                    className="group px-8 py-4 bg-gradient-to-r from-primary-orange to-orange-500 text-white font-bold text-lg rounded-2xl shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
-                                >
-                                    Découvrir les événements
-                                    <ArrowRightIcon className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                                </Link>
-                                <button className="px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white font-bold text-lg rounded-2xl hover:bg-white/20 transition-all duration-300 flex items-center justify-center group">
-                                    <PlayIcon className="w-6 h-6 mr-2 group-hover:scale-110 transition-transform duration-300" />
-                                    Voir la vidéo
-                                </button>
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.3 }}
+                        className="absolute bottom-20 left-1/4 transform -translate-x-1/2 w-full max-w-2xl"
+                    >
+                        <div className="bg-white rounded-3xl p-4 shadow-2xl">
+                            <div className="text-center mb-3">
+                                <h2 className="text-2xl font-black text-gray-900 text-left">
+                                    Trouvez votre{' '}
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-orange to-orange-500">
+                                        expérience
+                                    </span>
+                                </h2>
+                            </div>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+                                <div className="space-y-2">
+                                    <label className="block text-gray-900 font-semibold text-sm mb-1">
+                                        Activité
+                                    </label>
+                                    <div className="relative">
+                                        <MapPinIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                                        <input
+                                            type="text"
+                                            placeholder="Visite Guidée de la région"
+                                            className="w-full pl-10 pr-3 py-3 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent text-sm"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="space-y-2">
+                                    <label className="block text-gray-900 font-semibold text-sm mb-1">
+                                        Zone d'excursion
+                                    </label>
+                                    <div className="relative">
+                                        <CalendarIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                                        <input
+                                            type="text"
+                                            placeholder="Entrez une zone"
+                                            className="w-full pl-10 pr-3 py-3 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent text-sm"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="flex items-end">
+                                    <button className="w-full px-6 py-3 bg-primary-orange text-white font-semibold text-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                                        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                        </svg>
+                                        Voir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* À propos de Saint-Louis Section */}
+            <section className="section-padding bg-white">
+                <div className="container-custom">
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-16"
+                    >
+                        <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                            À propos de{' '}
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-orange to-orange-500">
+                                Saint-Louis
+                            </span>
+                        </h2>
+                    </motion.div>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8 }}
+                            viewport={{ once: true }}
+                            className="relative"
+                        >
+                            <div className="rounded-3xl overflow-hidden shadow-2xl">
+                                <img
+                                    src={saintlouis}
+                                    alt="Saint-Louis"
+                                    className="w-full h-96 object-cover"
+                                />
                             </div>
                         </motion.div>
 
                         <motion.div
                             initial={{ opacity: 0, x: 50 }}
-                            animate={{ opacity: 1, x: 0 }}
+                            whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="relative"
+                            viewport={{ once: true }}
+                            className="space-y-8"
                         >
-                            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-10 border border-white/20 shadow-2xl">
-                                <div className="text-center space-y-8">
-                                    <div className="w-32 h-32 bg-gradient-to-br from-primary-orange to-orange-500 rounded-full mx-auto flex items-center justify-center shadow-2xl">
-                                        <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center">
-                                            <div className="w-12 h-12 bg-gradient-to-br from-primary-orange to-orange-500 rounded-full flex items-center justify-center">
-                                                <div className="w-6 h-6 bg-white rounded-full"></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div className="space-y-6">
+                                <blockquote className="text-3xl font-black text-gray-900 leading-tight">
+                                    "Nous voyageons pour chercher d'autres vies, d'autres âmes"
+                                </blockquote>
 
-                                    <div className="space-y-4">
-                                        <h3 className="text-3xl font-black text-white">Ndar Gët</h3>
-                                        <p className="text-blue-100 text-lg font-medium">
-                                            Les yeux de Saint-Louis
-                                        </p>
-                                    </div>
+                                <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
+                                    <p>
+                                        Saint-Louis possède un patrimoine architectural unique, classé au patrimoine mondial de l'UNESCO depuis 2000. Cette ville historique, fondée en 1659, est la plus ancienne ville française d'Afrique de l'Ouest.
+                                    </p>
+                                    <p>
+                                        La ville abrite également deux parcs naturels classés par l'UNESCO depuis plus de 15 ans : le Parc de la Langue de Barbarie et le Parc aux oiseaux du Djoudj, offrant une biodiversité exceptionnelle.
+                                    </p>
+                                </div>
+                            </div>
 
-                                    <div className="grid grid-cols-2 gap-6">
-                                        <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm">
-                                            <div className="text-3xl font-black text-primary-orange mb-2">500+</div>
-                                            <div className="text-blue-100 font-semibold">Événements</div>
-                                        </div>
-                                        <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm">
-                                            <div className="text-3xl font-black text-primary-orange mb-2">1000+</div>
-                                            <div className="text-blue-100 font-semibold">Expériences</div>
-                                        </div>
+                            <div className="space-y-6">
+                                <div className="flex items-center space-x-4">
+                                    <div className="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                        <svg className="w-8 h-8 text-primary-orange" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 className="font-bold text-gray-900">Patrimoine UNESCO</h3>
+                                        <p className="text-sm text-gray-600">Classée au patrimoine mondial depuis 2000</p>
                                     </div>
                                 </div>
+
+                                <div className="flex items-center space-x-4">
+                                    <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                        <svg className="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 className="font-bold text-gray-900">Histoire Riche</h3>
+                                        <p className="text-sm text-gray-600">Plus ancienne ville française d'Afrique de l'Ouest (1659)</p>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-center space-x-4">
+                                    <div className="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center flex-shrink-0">
+                                        <svg className="w-8 h-8 text-teal-600" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H17c-.8 0-1.54.37-2.01 1l-4.5 6.5c-.37.54-.49 1.23-.32 1.85L12 22h6zM8 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 8.54 8H7c-.8 0-1.54.37-2.01 1L.49 15.5c-.37.54-.49 1.23-.32 1.85L4 22h8z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 className="font-bold text-gray-900">Culture Teranga</h3>
+                                        <p className="text-sm text-gray-600">Hospitalité sénégalaise légendaire</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="pt-6">
+                                <Link to="/a-propos" className="inline-block px-8 py-4 bg-primary-orange text-white font-bold text-lg rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                                    Lire plus
+                                </Link>
                             </div>
                         </motion.div>
                     </div>
