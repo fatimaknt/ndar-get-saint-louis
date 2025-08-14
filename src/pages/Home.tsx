@@ -8,8 +8,8 @@ import {
     TruckIcon,
     BuildingOfficeIcon,
     StarIcon,
-    ArrowRightIcon,
-    PlayIcon
+    ArrowRightIcon
+
 } from '@heroicons/react/24/outline';
 import saintlouis from '../assets/images/image2.jpeg';
 
@@ -93,7 +93,7 @@ const Home: React.FC = () => {
                             initial={{ opacity: 0, y: 50 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
-                            className="max-w-4l space-y-7 text-center"
+                            className="max-w-4xl space-y-7 text-center"
                         >
                             <div className="space-y-6">
                                 <h1 className="text-5xl md:text-7xl font-black leading-tight">
