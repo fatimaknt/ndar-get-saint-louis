@@ -120,63 +120,52 @@ const Home: React.FC = () => {
                             </div>
                         </motion.div>
                     </div>
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.3 }}
-                        className="absolute bottom-8 md:bottom-20 left-1/2 transform -translate-x-1/2 w-full max-w-sm md:max-w-2xl px-4 md:px-0"
-                    >
-                        <div className="bg-white rounded-3xl p-4 md:p-6 shadow-2xl">
-                            <div className="text-center mb-4 md:mb-3">
-                                <h2 className="text-xl md:text-2xl font-black text-gray-900">
-                                    Trouvez votre{' '}
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-orange to-orange-500">
-                                        expérience
-                                    </span>
-                                </h2>
-                            </div>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
-
-                                <div className="space-y-1 md:space-y-2">
-                                    <label className="block text-gray-900 font-semibold text-xs md:text-sm mb-1">
-                                        Activité
-                                    </label>
-                                    <div className="relative">
-                                        <MapPinIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-3 h-3 md:w-4 md:h-4 text-gray-400" />
-                                        <input
-                                            type="text"
-                                            placeholder="Visite Guidée de la région"
-                                            className="w-full pl-8 md:pl-10 pr-3 py-2 md:py-3 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent text-xs md:text-sm"
-                                        />
-                                    </div>
-                                </div>
-                                <div className="space-y-1 md:space-y-2">
-                                    <label className="block text-gray-900 font-semibold text-xs md:text-sm mb-1">
-                                        Zone d'excursion
-                                    </label>
-                                    <div className="relative">
-                                        <CalendarIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-3 h-3 md:w-4 md:h-4 text-gray-400" />
-                                        <input
-                                            type="text"
-                                            placeholder="Entrez une zone"
-                                            className="w-full pl-8 md:pl-10 pr-3 py-2 md:py-3 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent text-xs md:text-sm"
-                                        />
-                                    </div>
-                                </div>
-                                <div className="flex items-end">
-                                    <button className="w-full px-4 md:px-6 py-2 md:py-3 bg-primary-orange text-white font-semibold text-xs md:text-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
-                                        <svg className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                                        </svg>
-                                        Voir
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </motion.div>
                 </div>
             </section>
+
+            {/* Formulaire flottant bas d'écran */}
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-full max-w-lg px-2 z-40"
+            >
+                <div className="bg-white rounded-3xl p-4 md:p-6 shadow-2xl w-full flex flex-col items-center">
+                    <h2 className="text-xl md:text-2xl font-black text-gray-900 text-center mb-4">
+                        Trouvez votre <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-orange to-orange-500">expérience</span>
+                    </h2>
+                    <form className="w-full flex flex-col gap-3">
+                        <div className="w-full">
+                            <label className="block text-gray-900 font-semibold text-xs md:text-sm mb-1">Activité</label>
+                            <div className="relative">
+                                <MapPinIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                                <input
+                                    type="text"
+                                    placeholder="Visite Guidée de la région"
+                                    className="w-full pl-10 pr-3 py-2 md:py-3 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent text-xs md:text-sm"
+                                />
+                            </div>
+                        </div>
+                        <div className="w-full">
+                            <label className="block text-gray-900 font-semibold text-xs md:text-sm mb-1">Zone d'excursion</label>
+                            <div className="relative">
+                                <CalendarIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                                <input
+                                    type="text"
+                                    placeholder="Entrez une zone"
+                                    className="w-full pl-10 pr-3 py-2 md:py-3 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent text-xs md:text-sm"
+                                />
+                            </div>
+                        </div>
+                        <button type="submit" className="w-full px-6 py-2 md:py-3 bg-primary-orange text-white font-semibold text-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center mt-1 md:mt-0">
+                            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                            Voir
+                        </button>
+                    </form>
+                </div>
+            </motion.div>
 
             {/* À propos de Saint-Louis Section */}
             <section className="section-padding bg-white">
