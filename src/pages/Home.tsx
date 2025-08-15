@@ -123,49 +123,46 @@ const Home: React.FC = () => {
                 </div>
             </section>
 
-            {/* Formulaire flottant bas d'écran */}
-            <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-full max-w-lg px-2 z-40"
-            >
-                <div className="bg-white rounded-3xl p-4 md:p-6 shadow-2xl w-full flex flex-col items-center">
-                    <h2 className="text-xl md:text-2xl font-black text-gray-900 text-center mb-4">
-                        Trouvez votre <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-orange to-orange-500">expérience</span>
-                    </h2>
-                    <form className="w-full flex flex-col gap-3">
-                        <div className="w-full">
-                            <label className="block text-gray-900 font-semibold text-xs md:text-sm mb-1">Activité</label>
-                            <div className="relative">
-                                <MapPinIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-                                <input
-                                    type="text"
-                                    placeholder="Visite Guidée de la région"
-                                    className="w-full pl-10 pr-3 py-2 md:py-3 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent text-xs md:text-sm"
-                                />
+            {/* Trouvez votre expérience Section */}
+            <section className="section-padding bg-white">
+                <div className="container-custom flex flex-col items-center justify-center">
+                    <div className="w-full max-w-lg mx-auto bg-white rounded-3xl p-4 md:p-6 shadow-2xl flex flex-col items-center">
+                        <h2 className="text-xl md:text-2xl font-black text-gray-900 text-center mb-4">
+                            Trouvez votre <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-orange to-orange-500">expérience</span>
+                        </h2>
+                        <form className="w-full flex flex-col gap-3">
+                            <div className="w-full">
+                                <label className="block text-gray-900 font-semibold text-xs md:text-sm mb-1">Activité</label>
+                                <div className="relative">
+                                    <MapPinIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                                    <input
+                                        type="text"
+                                        placeholder="Visite Guidée de la région"
+                                        className="w-full pl-10 pr-3 py-2 md:py-3 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent text-xs md:text-sm"
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div className="w-full">
-                            <label className="block text-gray-900 font-semibold text-xs md:text-sm mb-1">Zone d'excursion</label>
-                            <div className="relative">
-                                <CalendarIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-                                <input
-                                    type="text"
-                                    placeholder="Entrez une zone"
-                                    className="w-full pl-10 pr-3 py-2 md:py-3 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent text-xs md:text-sm"
-                                />
+                            <div className="w-full">
+                                <label className="block text-gray-900 font-semibold text-xs md:text-sm mb-1">Zone d'excursion</label>
+                                <div className="relative">
+                                    <CalendarIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                                    <input
+                                        type="text"
+                                        placeholder="Entrez une zone"
+                                        className="w-full pl-10 pr-3 py-2 md:py-3 bg-white border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-orange focus:border-transparent text-xs md:text-sm"
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <button type="submit" className="w-full px-6 py-2 md:py-3 bg-primary-orange text-white font-semibold text-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center mt-1 md:mt-0">
-                            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                            </svg>
-                            Voir
-                        </button>
-                    </form>
+                            <button type="submit" className="w-full px-6 py-2 md:py-3 bg-primary-orange text-white font-semibold text-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center mt-1 md:mt-0">
+                                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                                Voir
+                            </button>
+                        </form>
+                    </div>
                 </div>
-            </motion.div>
+            </section>
 
             {/* À propos de Saint-Louis Section */}
             <section className="section-padding bg-white">
